@@ -1,0 +1,30 @@
+@media (max-width: 1100px) {
+  .clock {
+    &__title {
+      font-size: 50px;
+      text-align: center;
+    }
+    &__display {
+      font-size: 5rem;
+    }
+    &__week {
+      flex-wrap: wrap;
+      font-size: 3rem;
+    }
+  }
+}
+@media (max-width: 560px) {
+  .clock {
+    &__title {
+      font-size: 27px;
+    }
+    &__display {
+      font-size: 2.5rem;
+      margin: 0; 
+    }
+    &__week {
+      font-size: 2rem;
+      gap: 5%;
+    }
+  }
+}

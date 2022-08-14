@@ -23,7 +23,7 @@ function currentTime() {
   seconds = seconds < 10 ? "0" + seconds : seconds;
 
   //time display style
-  let time = hours + " : " + minutes + " : " + seconds + "   " + session;
+  let time = hours + " : " + minutes + " : " + seconds;
 
   //geting clock display paragraph from DOM
   document.querySelector(".clock__display").innerText = time;
