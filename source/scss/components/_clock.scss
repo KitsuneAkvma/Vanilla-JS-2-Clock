@@ -1,0 +1,42 @@
+.clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  &__title {
+    font-size: 70px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  &__display {
+    margin-block: 2rem 0;
+
+    font-family: "Coda", cursive;
+    font-size: 9rem;
+    color: $secondary;
+    letter-spacing: 0.2em;
+    text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 20px #7f5af0, 0 0 30px #7f5af0,
+      0 0 40px #7f5af0, 0 0 55px #7f5af0, 0 0 75px #7f5af0;
+    color: #ffffff;
+  }
+  &__week {
+    display: flex;
+    gap: 3.5%;
+    justify-content: center;
+
+    font-family: "Coda", cursive;
+    font-size: 4rem;
+    color: darken($color: $accent, $amount: 20);
+  }
+  &__week__day {
+    /*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #2cb67d,
+      0 0 30px #2cb67d, 0 0 40px #2cb67d, 0 0 55px #2cb67d, 0 0 75px #2cb67d;*/
+    text-transform: uppercase;
+  }
+}
+.active {
+  color: lighten($color: $accent, $amount: 20);
+  text-shadow: 0 0 20px #2cb67d;
+}
