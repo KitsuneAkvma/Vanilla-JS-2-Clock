@@ -81,6 +81,11 @@ function currentDay() {
     today == 6
       ? weekday[6].classList.add("active")
       : weekday[6].classList.remove("active");
+
+  let t = setTimeout(function () {
+    currentDay();
+    1000;
+  });
 }
 
 //calling functions
