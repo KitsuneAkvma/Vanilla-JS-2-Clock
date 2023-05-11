@@ -27,9 +27,8 @@ function currentTime() {
 
   //geting clock display paragraph from DOM
   document.querySelector(".clock__display").innerText = time;
-  let t = setTimeout(function () {
-    currentTime();
-  }, 1000);
+
+  let t = setTimeout(currentTime, 1000);
 }
 
 function currentDay() {
@@ -37,9 +36,9 @@ function currentDay() {
   /////// Variables
   /////////////////
 
-  let date = new Date();
-  let today = date.getDay();
-  var weekday = [
+  const date = new Date();
+  const today = date.getDay();
+  var weekdays = [
     document.querySelector("#sunday"),
     document.querySelector("#monday"),
     document.querySelector("#tuesday"),
@@ -53,39 +52,16 @@ function currentDay() {
   // Week day selector
   /////////////////////
 
-  today =
-    today == 0
-      ? weekday[0].classList.add("active")
-      : weekday[0].classList.remove("active");
-  today =
-    today == 1
-      ? weekday[1].classList.add("active")
-      : weekday[1].classList.remove("active");
-  today =
-    today == 2
-      ? weekday[2].classList.add("active")
-      : weekday[2].classList.remove("active");
-  today =
-    today == 3
-      ? weekday[3].classList.add("active")
-      : weekday[3].classList.remove("active");
-  today =
-    today == 4
-      ? weekday[4].classList.add("active")
-      : weekday[4].classList.remove("active");
-  today =
-    today == 5
-      ? weekday[5].classList.add("active")
-      : weekday[5].classList.remove("active");
-  today =
-    today == 6
-      ? weekday[6].classList.add("active")
-      : weekday[6].classList.remove("active");
+  for (const weekday of weekdays) {
+    if (weekdays.indexOf(weekday) === today) {
+      weekday.classList.add("active");
+      return;
+    }
 
-  let t = setTimeout(function () {
-    currentDay();
-    1000;
-  });
+    weekday.classList.remove("active");
+  }
+
+  let t = setTimeout(currentDay, 1000);
 }
 
 //calling functions
